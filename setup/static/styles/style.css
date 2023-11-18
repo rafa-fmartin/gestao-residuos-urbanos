@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;700&display=swap');
 
+/*
+green: #6EB125
+red: #D01D00
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -131,4 +136,22 @@ body {
 
 .rodape__texto {
     font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: #000000; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remover a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px; /* Arredonda as bordas do botão */
+}
+
+.btn-primary:hover {
+    background-color: #3b3b3b; /* Cor de fundo diferente no hover */
 }
