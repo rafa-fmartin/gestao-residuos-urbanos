@@ -22,11 +22,6 @@ def svg_to_graph(request):
             cy = float(element.get('cy'))
             G.add_node((cx, cy))
 
-    # for node1 in G.nodes:
-    #     for node2 in G.nodes:
-    #         if node1 != node2:
-    #             G.add_edge(node1, node2)
-
     nodes = list(G.nodes)
     for i, node1 in enumerate(nodes):
         for node2 in nodes[i+1:]:
@@ -77,6 +72,6 @@ def svg_to_graph(request):
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)))
 
-    opy.plot(fig, auto_open=False, image_width=800, image_height=600, filename=img_path)
-
-    return render(request, 'mapa/graph.html', {'img_path': img_path})
+    # Adicione informações adicionais para o template
+    button_url = "/caminho/do/seu/botao"  # Substitua pelo URL desejado
+    return render(request, 'mapa/graph.html', {'img_path': img_path, 'button_url': button_url})
